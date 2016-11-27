@@ -1,0 +1,24 @@
+h1 Listing matches
+
+table
+  thead
+    tr
+      th Match
+      th Teams
+      th Data
+      th Score
+      th
+      th
+      th
+
+  tbody
+    - @matches.each do |match|
+      tr
+        td = link_to "Match ##{match.id}", match_path(match)
+        td #{@teams.find(match.home_team_id).name} - #{@teams.find(match.away_team_id).name}
+        td = match.date
+        td #{match.value1} - #{match.value2}
+
+br
+
+= link_to 'New Match', new_match_path

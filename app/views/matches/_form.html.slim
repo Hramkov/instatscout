@@ -1,0 +1,15 @@
+= simple_form_for(@match) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.select :home_team_id,
+        options_for_select(@teams.map{|home| ["#{home.name}", home.id]}, f.object.home_team_id), :prompt => "Select a home team"
+    = f.select :away_team_id,
+        options_for_select(@teams.map{|away| ["#{away.name}", away.id]}, f.object.away_team_id), :prompt => "Select a away team"
+    = f.input :date
+    = f.input :value1
+    = f.input :value2
+
+  .form-actions
+    = f.button :submit
+
