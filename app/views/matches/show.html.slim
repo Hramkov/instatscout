@@ -1,27 +1,19 @@
-p#notice = notice
-
-row
-  col-md-12
-    h1 Match ##{@match.id}  #{@home.name} - #{@away.name}
-  col-md-6
-    h4
-      | HOME TEAM
-    h1.team-name
-      | #{@home.name}
-
-    hr
-  col-md-6
-    h4
-      | AWAY TEAM
-    h1.team-name
-      | #{@away.name}
-p
-  strong Date:
-  = @match.date
-p
-  strong Value: #{@match.value1} - #{@match.value2}
-
-
-/ = link_to 'Edit', edit_match_path(@match)
-/ '|
-= link_to 'Back', matches_path
+.container
+  .row.text-center
+    h1 #{@home.name} - #{@away.name}
+    .col-md-6
+      h4
+        | HOME TEAM
+      h1.team-name
+        | #{@home.name}
+      h1 #{@match.value1}
+    .col-md-6
+      h4
+        | AWAY TEAM
+      h1.team-name
+        | #{@away.name}
+      h1 #{@match.value2}
+    h1
+      = @match.date
+    br
+    = link_to 'Back', matches_path, class: 'btn btn-info'

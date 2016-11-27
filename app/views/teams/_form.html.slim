@@ -5,4 +5,5 @@
     = f.input :name
 
   .form-actions
-    = f.button :submit
+    = f.button :submit, class: 'btn btn-success'
+    = link_to 'Back', teams_path, class: 'btn btn-info', id: 'back_button'

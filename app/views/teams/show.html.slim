@@ -1,9 +1,6 @@
-p#notice = notice
-
-p
-  strong Name:
-  = @team.name
-
-= link_to 'Edit', edit_team_path(@team)
-'|
-= link_to 'Back', teams_path
+.container
+  h1
+    = @team.name
+  br
+  = link_to 'Edit', edit_team_path(@team), class: 'btn btn-warning'
+  = link_to 'Back', teams_path, class: 'btn btn-info', id: 'back_button'

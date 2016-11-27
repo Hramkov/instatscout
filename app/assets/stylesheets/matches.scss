@@ -1,3 +1,25 @@
 // Place all the styles related to the matches controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#back_button{
+	margin-left: 10px;
+}
+.row_spasing{
+	border-spacing: 7px 11px;
+}
+th{
+	padding: 5px;
+}
+.form-control.numeric.integer.optional{
+	width: 100px;
+}
+#match_home_team_id,#match_away_team_id{
+	width: 200px;
+	
+}
+.form-group > select{
+    display: inline-flex;
+}
+#match_away_team_id{
+	margin-left: 10px;
+}

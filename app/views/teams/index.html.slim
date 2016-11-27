@@ -1,21 +1,19 @@
-h1 Listing teams
+.container
+  h1 Listing teams
 
-table
-  thead
-    tr
-      th Name
-      th
-      th
-      th
-
-  tbody
-    - @teams.each do |team|
+  table
+    thead
       tr
-        td = team.name
-        td = link_to 'Show', team
-        td = link_to 'Edit', edit_team_path(team)
-        td = link_to 'Destroy', team, data: { confirm: 'Are you sure?' }, method: :delete
+        th Name
+    tbody
+      - @teams.each do |team|
+        tr.row_spasing
+          td = team.name
+          td = link_to 'Show', team, class: 'btn btn-success'
+          td = link_to 'Edit', edit_team_path(team), class: 'btn btn-warning', id: 'back_button'
+          td = link_to 'Destroy', team, data: { confirm: 'Are you sure?' }, method: :delete, class: 'btn btn-danger', id: 'back_button'
 
-br
+  br
 
-= link_to 'New Team', new_team_path
+  = link_to 'New Team', new_team_path, class: 'btn btn-info'
+  = link_to 'New Match', new_match_path, class: 'btn btn-warning', id: 'back_button'
