@@ -1,25 +1,26 @@
-h1 Listing players
+.container
+  h1 Listing players
 
-table
-  thead
-    tr
-      th Name
-      th Role
-      th Teams
-      th
-      th
-      th
-
-  tbody
-    - @players.each do |player|
+  table
+    thead
       tr
-        td = player.name
-        td = player.role
-        td = player.teams.try(:name)
-        td = link_to 'Show', player
-        td = link_to 'Edit', edit_player_path(player)
-        td = link_to 'Destroy', player, data: { confirm: 'Are you sure?' }, method: :delete
+        th Name
+        th Role
+        th Teams
+        th
+        th
+        th
 
-br
+    tbody
+      - @players.each do |player|
+        tr.row_spasing
+          td = player.name
+          td = player.role
+          td = player.teams.try(:name)
+          td = link_to 'Show', player, class: 'btn btn-success'
+          td = link_to 'Edit', edit_player_path(player), class: 'btn btn-warning', id: 'back_button'
+          td = link_to 'Destroy', player, data: { confirm: 'Are you sure?' }, method: :delete, class: 'btn btn-danger', id: 'back_button'
 
-= link_to 'New Player', new_player_path
+  br
+
+  = link_to 'New Player', new_player_path, class: 'btn btn-info'
