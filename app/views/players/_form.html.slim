@@ -1,0 +1,10 @@
+= simple_form_for(@player) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :name
+    = f.input :role
+    = f.collection_select :teams_id, Team.order(:name), :id, :name, {include_blank: 'Select a Team'}, {class: "form-control"}
+    br
+  .form-actions
+    = f.button :submit
