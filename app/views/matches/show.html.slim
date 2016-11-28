@@ -5,13 +5,13 @@
       h4
         | HOME TEAM
       h1.team-name
-        | #{@home.name}
+        = link_to "#{@home.name}", team_path
       h1 #{@match.value1}
     .col-md-6
       h4
         | AWAY TEAM
       h1.team-name
-        | #{@away.name}
+        = link_to "#{@away.name}", team_path
       h1 #{@match.value2}
     h1
       = @match.date.to_s(:short)
