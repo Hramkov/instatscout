@@ -9,8 +9,12 @@
       = f.select :away_team_id,
         options_for_select(@teams.map{|away| ["#{away.name}", away.id]}, f.object.away_team_id), {}, class: "form-control", :prompt => "Select a away team"
     = f.input :date
-    = f.input :value1
-    = f.input :value2
+    h4 Score
+    .score
+      p
+        = f.input_field :value1, class: "form-control"
+      p
+        = f.input_field :value2, class: "form-control"
 
   .form-actions
     = f.button :submit

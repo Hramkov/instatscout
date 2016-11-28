@@ -1,7 +1,7 @@
 // Place all the styles related to the matches controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-#back_button{
+#back_button, #match_value2{
 	margin-left: 10px;
 }
 .row_spasing{
@@ -11,7 +11,7 @@ th{
 	padding: 5px;
 }
 .form-control.numeric.integer.optional{
-	width: 100px;
+	width: 200px;
 }
 #match_home_team_id,#match_away_team_id{
 	width: 200px;
@@ -22,4 +22,7 @@ th{
 }
 #match_away_team_id{
 	margin-left: 10px;
+}
+.score{
+	display: inline-flex;
 }

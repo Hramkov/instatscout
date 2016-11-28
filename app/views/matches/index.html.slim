@@ -17,7 +17,7 @@
         tr
           td = link_to "Match ##{match.id}", match_path(match)
           td #{@teams.find(match.home_team_id).name} - #{@teams.find(match.away_team_id).name}
-          td = match.date
+          td = match.date.to_s(:short)
           td #{match.value1} - #{match.value2}
 
   br
